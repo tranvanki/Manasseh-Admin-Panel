@@ -50,3 +50,6 @@ tests/
     └── RoleTest.php                    # Tests for role logic
 
     phpUnit, breeze, spatie
+*REMEMBER TO CREATE An APP KEY TO RUN .env file:
+"cd admin-panel
+php artisan key:generate"
