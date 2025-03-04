@@ -1,0 +1,52 @@
+
+7. Example Workflow
+
+
+app/
+├── Console/
+├── Exceptions/
+├── Http/
+│   ├── Controllers/
+│   │   ├── Admin/
+│   │   │   ├── UserController.php       # Handles CRUD for users
+│   │   │   ├── RoleController.php       # Manages roles and permissions
+│   │   │   └── AuditLogController.php   # Logs user activity
+│   │   └── Auth/
+│   │       └── LoginController.php      # Handles authentication
+│   └── Middleware/
+│       └── RoleMiddleware.php           # Middleware for role-based access
+├── Models/
+│   ├── User.php                         # Eloquent model for users
+│   ├── Role.php                         # Eloquent model for roles
+│   └── AuditLog.php                     # Eloquent model for audit logs
+├── Providers/
+└── Traits/
+database/
+├── factories/
+│   ├── UserFactory.php                  # Factory for seeding users
+├── migrations/
+│   ├── 2023_01_01_000000_create_users_table.php
+│   ├── 2023_01_01_000001_create_roles_table.php
+│   └── 2023_01_01_000002_create_audit_logs_table.php
+├── seeders/
+│   ├── DatabaseSeeder.php               # Main seeder
+│   ├── RoleSeeder.php                   # Seeder for roles
+│   └── UserSeeder.php                   # Seeder for users
+routes/
+├── api.php                             # API routes (optional)
+├── web.php                             # Web routes for admin panel
+resources/
+├── views/
+│   ├── admin/
+│   │   ├── users/
+│   │   │   ├── index.blade.php         # List users
+│   │   │   ├── create.blade.php        # Add user form
+│   │   │   ├── edit.blade.php          # Edit user form
+│   │   └── dashboard.blade.php         # Admin dashboard
+tests/
+├── Feature/
+│   ├── UserManagementTest.php          # Tests for user management
+└── Unit/
+    └── RoleTest.php                    # Tests for role logic
+
+    phpUnit, breeze, spatie
